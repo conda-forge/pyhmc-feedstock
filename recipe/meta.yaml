@@ -19,15 +19,16 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
+  host:
     - python
     - setuptools
-    - toolchain
     - cython
-    - numpy x.x
+    - numpy
   run:
     - python
     - setuptools
-    - numpy x.x
+    - {{ pin_compatible('numpy') }}
     - scipy
     - statsmodels
 
