@@ -14,7 +14,7 @@ source:
     - add-license.patch
 
 build:
-  number: 1003
+  number: 1004
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
