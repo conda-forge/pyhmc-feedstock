@@ -8,13 +8,13 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
     - add-license.patch
 
 build:
-  number: 1004
+  number: 1005
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -29,7 +29,6 @@ requirements:
   run:
     - python
     - setuptools
-    - {{ pin_compatible('numpy') }}
     - scipy
     - statsmodels
 
